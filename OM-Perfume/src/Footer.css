@@ -1,0 +1,174 @@
+/* src/Footer.css */
+
+/* --- 6. Footer Styling --- */
+
+footer {
+    border-top: 1px solid #eee;
+    padding-top: 30px;
+    background-color: #fff;
+}
+.site-footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 0;
+    gap: 30px;
+}
+
+.footer-column {
+    flex: 1;
+    max-width: 300px;
+}
+
+.footer-column h4 {
+    font-size: 1.1em;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.footer-column p {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.news-item {
+    margin-bottom: 15px;
+    border-bottom: 1px dashed #ddd;
+    padding-bottom: 15px;
+}
+
+.news-meta {
+    font-weight: bold;
+    font-size: 0.9em;
+}
+
+.view-all {
+    font-size: 0.8em;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.subscribe-form-container input[type="email"] {
+    padding: 10px;
+    border: 1px solid #ddd;
+    width: 100%;
+    max-width: 200px;
+    box-sizing: border-box;
+}
+
+.subscribe-form-container button {
+    background-color: #333;
+    color: white;
+    padding: 10px 15px;
+    margin-left: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 0;
+    transition: background-color 0.3s;
+}
+.subscribe-form-container button:hover:not(:disabled) {
+    background-color: #555;
+}
+.subscribe-form-container button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.subscribe-form {
+    display: flex;
+    margin-top: 15px;
+    align-items: stretch;
+}
+
+.copyright {
+    text-align: center;
+    padding: 15px 0;
+    border-top: 1px solid #eee;
+    font-size: 0.8em;
+    color: #888;
+}
+
+/* Status Message Styling */
+.status-message {
+    margin-top: 10px;
+    font-size: 0.8em;
+    font-weight: bold;
+    padding: 8px;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.success-msg {
+    background-color: #e6ffed;
+    color: #008000;
+}
+
+.error-msg {
+    background-color: #ffe6e6;
+    color: #cc0000;
+}
+
+.submitting-msg {
+    background-color: #fffbe6;
+    color: #cc9900;
+}
+
+/* Policy Link Bar in Footer */
+.policy-links-bar {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 20px;
+    text-align: center;
+    border-top: 1px solid #ddd;
+}
+.policy-links-bar a {
+    font-size: 0.9em;
+    color: #666;
+    margin: 0 15px;
+    transition: color 0.2s;
+}
+.policy-links-bar a:hover {
+    color: #333;
+}
+
+/* Footer Mobile Responsiveness */
+@media (max-width: 768px) {
+    .site-footer {
+        flex-direction: column;
+        gap: 40px;
+        padding: 30px 0;
+    }
+    .footer-column {
+        max-width: 100%; 
+        text-align: center;
+    }
+    .subscribe-form {
+        justify-content: center; 
+    }
+    .policy-links-bar {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .policy-links-bar a {
+        margin: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .subscribe-form {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+    .subscribe-form-container input[type="email"] {
+        max-width: 250px;
+    }
+    .subscribe-form-container button {
+        margin-left: 0;
+        width: 100%;
+        max-width: 250px;
+    }
+}

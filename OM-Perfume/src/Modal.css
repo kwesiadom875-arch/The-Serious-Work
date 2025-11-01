@@ -1,0 +1,170 @@
+/* src/Modal.css */
+
+/* --- 9. Quick View Modal Styling --- */
+
+/* Modal Overlay */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Modal Content Box */
+.modal-content {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    max-width: 900px;
+    width: 90%;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Close Button */
+.modal-close-button {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 2em;
+    line-height: 1;
+    color: #333;
+    background: transparent;
+    cursor: pointer;
+    padding: 0;
+}
+
+/* Modal Body Layout */
+.modal-body {
+    display: flex;
+    gap: 30px;
+    padding-top: 10px;
+}
+
+.modal-image-col {
+    flex: 1;
+}
+
+.modal-product-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.modal-details-col {
+    flex: 1.5;
+    padding-left: 10px;
+}
+
+.modal-category {
+    font-size: 0.9em;
+    text-transform: uppercase;
+    color: #666;
+    margin: 0 0 5px 0;
+}
+
+.modal-product-name {
+    font-size: 2em;
+    font-weight: 300;
+    margin: 0 0 10px 0;
+}
+
+.modal-price {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #333;
+    margin: 10px 0 20px 0;
+}
+
+.modal-description {
+    font-size: 1em;
+    color: #555;
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+/* Options/Actions Styling */
+.option-selector {
+    margin-bottom: 20px;
+}
+.option-selector label {
+    font-weight: bold;
+    margin-right: 15px;
+}
+.size-select {
+    padding: 8px 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.modal-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.quantity-input {
+    width: 60px;
+    padding: 10px 10px;
+    text-align: center;
+    border: 1px solid #333;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+.add-to-cart-lg {
+    background-color: #333;
+    color: white;
+    padding: 12px 25px;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    flex-grow: 1; 
+    max-width: 300px;
+}
+.add-to-cart-lg:hover {
+    background-color: #555;
+}
+
+/* Responsive Modal Adjustments */
+@media (max-width: 768px) {
+    .modal-content {
+        width: 95%;
+        margin: 10px;
+        padding: 20px;
+    }
+    .modal-body {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .modal-details-col {
+        padding-left: 0;
+        text-align: center;
+    }
+    .modal-product-name {
+        font-size: 1.5em;
+    }
+    .modal-price {
+        font-size: 1.2em;
+    }
+    .modal-actions {
+        flex-direction: column;
+        width: 100%;
+    }
+    .quantity-input {
+        width: 100%;
+        max-width: none;
+    }
+    .add-to-cart-lg {
+        width: 100%;
+        max-width: none;
+    }
+}

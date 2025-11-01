@@ -1,0 +1,151 @@
+/* src/Header.css */
+
+/* --- 1. Header Styling --- */
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 0;
+    font-size: 0.8em;
+    color: #888;
+    border-bottom: 1px solid #eee;
+}
+.social-icons a {
+    margin-left: 15px;
+}
+.main-nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+.logo-text {
+    font-size: 2.5em;
+    font-weight: 900;
+    letter-spacing: -2px;
+    margin: 0;
+}
+.primary-nav ul {
+    display: flex;
+    gap: 30px;
+    font-size: 0.9em;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+/* --- Utility Icons and Search Integration --- */
+.utility-icons {
+    display: flex; /* Ensure utility icons align nicely */
+    align-items: center;
+    position: relative;
+}
+.utility-icons button {
+    font-size: 1.2em;
+    margin-left: 15px;
+    position: relative;
+}
+.cart-button {
+    font-weight: bold;
+    color: #333;
+    /* Use padding/display block for alignment */
+    padding: 5px; 
+    display: inline-block;
+}
+
+/* --- Search Container Styling --- */
+.search-container {
+    display: flex;
+    align-items: center;
+    /* Set a fixed container width for the animation */
+    width: 30px; 
+    overflow: hidden;
+    transition: width 0.3s ease-in-out;
+    margin-left: 15px;
+}
+
+.search-container.open {
+    /* Expand the container when the search button is clicked */
+    width: 250px; 
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 3px;
+}
+
+.search-toggle-btn {
+    /* Always visible */
+    z-index: 10;
+    padding: 0;
+    margin: 0;
+    font-size: 1.2em;
+}
+
+.search-input {
+    flex-grow: 1;
+    border: none;
+    outline: none;
+    padding: 0 10px;
+    font-size: 1em;
+    height: 25px;
+    line-height: 25px;
+    background: transparent;
+    width: 100%; /* Important for expansion */
+}
+/* Ensure the input is hidden when collapsed */
+.search-container:not(.open) .search-input {
+    opacity: 0;
+    pointer-events: none;
+}
+
+
+/* --- Notification Styling (Remains the same) --- */
+.cart-notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #333;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    z-index: 2000; 
+    opacity: 0;
+    transform: translateY(-100px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    font-weight: bold;
+    text-align: center;
+}
+
+.cart-notification.visible {
+    opacity: 1;
+    transform: translateY(0); 
+}
+
+/* --- Mobile Responsiveness (Header Specific) --- */
+@media (max-width: 768px) {
+    .top-bar {
+        display: none; 
+    }
+    .main-nav-bar {
+        padding: 15px 0;
+    }
+    .logo-text {
+        font-size: 2em;
+    }
+    .primary-nav {
+        display: none;
+    }
+    /* Collapse search bar space entirely on small screen when closed */
+    .search-container {
+        margin-left: 10px;
+    }
+    /* Force search bar to overlay/be fixed on mobile view for easy typing */
+    .search-container.open {
+        position: absolute;
+        width: 180px; /* Adjust size for mobile */
+        right: 80px; /* Position it correctly relative to the cart icon */
+        background: white;
+        padding: 5px 0;
+        border: 1px solid #333;
+        border-radius: 4px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+}

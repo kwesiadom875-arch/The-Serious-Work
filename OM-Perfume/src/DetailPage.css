@@ -1,0 +1,204 @@
+/* src/DetailPage.css */
+
+/* --- 13. Product Detail Page Styling --- */
+
+.product-detail-container {
+    padding: 60px 0;
+}
+.product-detail-container.not-found {
+    text-align: center;
+    min-height: 50vh;
+}
+
+.detail-grid {
+    display: flex;
+    gap: 80px;
+}
+
+.detail-image-col {
+    flex: 1;
+    max-width: 500px;
+}
+
+.detail-product-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.detail-details-col {
+    flex: 1.5;
+}
+
+.detail-category-link {
+    font-size: 0.9em;
+    text-transform: uppercase;
+    color: #888;
+    margin-bottom: 5px;
+}
+
+.detail-product-name {
+    font-size: 3em;
+    font-weight: 300;
+    margin: 0 0 10px 0;
+}
+
+.detail-price {
+    font-size: 2em;
+    font-weight: bold;
+    color: #333;
+    margin: 15px 0 30px 0;
+}
+
+.detail-description {
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 1px dashed #eee;
+}
+
+/* Options/Actions */
+.detail-option-selector {
+    margin-bottom: 30px;
+}
+.detail-option-selector label {
+    font-weight: bold;
+    margin-right: 15px;
+}
+.detail-size-select {
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+.detail-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.detail-quantity-input {
+    width: 80px;
+    padding: 10px 15px;
+    text-align: center;
+    border: 1px solid #333;
+    border-radius: 4px;
+    font-size: 1.1em;
+}
+
+.detail-add-to-cart-btn {
+    background-color: #333;
+    color: white;
+    padding: 12px 35px;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    font-size: 1.1em;
+}
+.detail-add-to-cart-btn:hover {
+    background-color: #555;
+}
+
+/* --- Video Player Styling --- */
+
+.video-player-container {
+    width: 100%;
+    margin-bottom: 40px;
+    /* Maintain 16:9 Aspect Ratio */
+    position: relative;
+    padding-bottom: 56.25%; 
+    height: 0;
+    overflow: hidden;
+    border-radius: 8px;
+}
+.video-player {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* Responsive Detail Page */
+@media (max-width: 992px) {
+    .detail-grid {
+        flex-direction: column;
+        gap: 40px;
+    }
+    .detail-image-col {
+        max-width: 100%;
+        text-align: center;
+    }
+    .detail-details-col {
+        text-align: center;
+    }
+    .detail-product-name {
+        font-size: 2.5em;
+    }
+    .detail-actions {
+        justify-content: center;
+    }
+}
+/* --- 19. Key Ingredients Section Styling --- */
+
+.key-ingredients-section {
+    margin-top: 20px;
+    margin-bottom: 40px;
+    padding: 20px 0;
+    border-top: 1px dashed #eee;
+}
+
+.key-ingredients-section h2 {
+    font-size: 1.2em;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.ingredient-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    gap: 20px;
+}
+
+.ingredient-item {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    padding: 10px;
+    border: 1px solid #f0f0f0;
+    border-radius: 4px;
+    background-color: #fcfcfc;
+}
+
+.ingredient-icon {
+    font-size: 1.8em;
+    margin-right: 15px;
+}
+
+.ingredient-text h4 {
+    font-size: 0.95em;
+    font-weight: 600;
+    margin: 0;
+}
+
+.ingredient-text p {
+    font-size: 0.8em;
+    color: #666;
+    margin: 0;
+}
+
+/* Detail Page Responsiveness Update */
+@media (max-width: 992px) {
+    /* ... existing detail page responsive styles ... */
+
+    .ingredient-grid {
+        grid-template-columns: 1fr; /* Single column on tablets/mobile */
+    }
+}

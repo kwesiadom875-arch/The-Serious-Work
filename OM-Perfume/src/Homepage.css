@@ -1,0 +1,340 @@
+/* src/Homepage.css */
+
+/* --- 2. Hero Section Styling (ScentHero) --- */
+.hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px 0;
+    gap: 40px;
+    min-height: 450px;
+}
+.hero-content {
+    flex: 1;
+    max-width: 400px;
+}
+.hero-headline {
+    font-size: 3.5em; 
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+.hero-subtext {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+.cta-button {
+    font-weight: bold;
+    font-size: 0.9em;
+    color: #333;
+    padding: 5px 0;
+    border-bottom: 2px solid #333;
+    transition: border-color 0.3s;
+}
+.cta-button:hover {
+    border-color: #999;
+}
+.hero-image-container {
+    flex: 1;
+    text-align: right;
+}
+.hero-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%; 
+}
+.hero-image-container img {
+    background-color: #f0f0f0; 
+    width: 350px; 
+    height: 350px; 
+    border-radius: 50%;
+}
+
+/* --- 3. Perk Blocks Styling --- */
+.perk-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 40px 0;
+    margin-top: 30px;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+
+.perk-block {
+    flex: 1;
+    text-align: left;
+    padding-right: 20px;
+}
+
+.perk-block h4 {
+    font-size: 1.2em;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.perk-block p {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.view-link {
+    font-size: 0.85em;
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+    transition: color 0.3s;
+}
+
+.view-link:hover {
+    color: #888;
+}
+
+/* --- 4. Product Categories Styling --- */
+
+.category-section {
+    text-align: center; 
+    padding: 60px 0 20px 0;
+}
+
+.section-title {
+    font-size: 1.8em;
+    font-weight: 400;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.category-nav ul {
+    display: flex;
+    justify-content: center; 
+    gap: 30px;
+}
+
+.category-nav li {
+    font-size: 0.9em;
+    padding-bottom: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.category-nav li a {
+    color: #666;
+    transition: color 0.3s;
+}
+
+.category-nav li.active a {
+    color: #333; 
+    font-weight: bold;
+    border-bottom: 2px solid #333;
+    padding-bottom: 5px;
+}
+.category-nav li:hover a {
+    color: #333; 
+}
+
+
+/* --- 5. Product Grid and Card Styling --- */
+
+.product-grid-section {
+    padding: 20px 0 60px 0;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.product-card {
+    text-align: center;
+    padding: 15px;
+    transition: box-shadow 0.3s, transform 0.3s;
+    position: relative;
+    overflow: hidden; 
+}
+
+.product-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.product-image-wrapper {
+    position: relative;
+    margin-bottom: 10px;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.product-image {
+    width: 100%;
+    height: 350px; 
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.product-card:hover .product-image {
+    transform: scale(1.05); 
+}
+
+.badges {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 10;
+}
+
+.badge {
+    display: block;
+    padding: 5px 10px;
+    font-size: 0.75em;
+    font-weight: bold;
+    border-radius: 3px;
+    margin-bottom: 5px;
+    color: white;
+}
+
+.new-badge {
+    background-color: #333;
+}
+
+.sale-badge {
+    background-color: #A34; 
+}
+
+.rating-stars {
+    margin: 5px 0;
+}
+
+.star {
+    font-size: 0.9em;
+    padding: 0 1px;
+}
+
+.product-name-link {
+    color: inherit;
+    text-decoration: none;
+}
+.product-name {
+    font-size: 1.1em;
+    font-weight: 500;
+    margin: 5px 0;
+}
+
+.product-price {
+    font-size: 1em;
+    font-weight: bold;
+    color: #333;
+    margin-top: 5px;
+}
+
+.quick-buy-button {
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    background-color: white;
+    color: #333;
+    padding: 10px 20px;
+    border: 1px solid #333;
+    border-radius: 4px;
+    font-size: 0.85em;
+    font-weight: bold;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s, transform 0.3s;
+    z-index: 5;
+}
+
+.product-card:hover .quick-buy-button {
+    opacity: 1;
+    pointer-events: all;
+    transform: translate(-50%, 50%) translateY(0px); 
+}
+
+.all-products-button {
+    background-color: transparent;
+    border: 1px solid #333;
+    color: #333;
+    padding: 10px 30px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 0 auto;
+    display: block;
+    border-radius: 4px;
+    transition: all 0.3s;
+}
+
+.all-products-button:hover {
+    background-color: #333;
+    color: white;
+}
+
+/* --- Homepage Mobile Specific --- */
+@media (max-width: 768px) {
+    /* Hero Section Stacking */
+    .hero-section {
+        flex-direction: column-reverse; 
+        text-align: center;
+        min-height: auto;
+        padding: 40px 0;
+        gap: 20px;
+    }
+    .hero-content {
+        max-width: 100%;
+    }
+    .hero-headline {
+        font-size: 2.5em;
+    }
+    .hero-image-container {
+        text-align: center;
+    }
+    .hero-image-container img {
+        width: 250px;
+        height: 250px;
+    }
+
+    /* Perk Blocks Stacking */
+    .perk-container {
+        flex-direction: column;
+        gap: 30px;
+        padding: 30px 0;
+    }
+    .perk-block {
+        text-align: center;
+        padding-right: 0;
+    }
+    .perk-block h4 {
+        margin-top: 15px;
+    }
+
+    /* Product Grid Reduction */
+    .product-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); 
+        gap: 15px;
+    }
+    .product-image {
+        height: 250px; 
+    }
+
+    /* Category Navigation */
+    .category-nav ul {
+        gap: 15px;
+        flex-wrap: wrap; 
+        padding: 0 10px;
+    }
+    .category-nav li {
+        font-size: 0.8em;
+    }
+}
+
+@media (max-width: 480px) {
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+    .product-card {
+        padding: 10px;
+    }
+}
